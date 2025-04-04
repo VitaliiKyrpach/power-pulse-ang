@@ -1,1 +1,51 @@
-<p>register-page works!</p>
+<section>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <p>
+      Thank you for your interest in our platform. To complete the registration
+      process, please provide us with the following information.
+    </p>
+    <form [formGroup]="regForm" (ngSubmit)="formSubmit()">
+      <div>
+        <input
+          type="text"
+          placeholder="Name"
+          formControlName="name"
+          (blur)="updErrors('name')"
+        />
+        @if(errors.name){
+        <p>{{ errors.name }}</p>
+        }
+      </div>
+      <div>
+        <input
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+          (blur)="updErrors('email')"
+        />
+        @if(errors.email){
+        <p>{{ errors.email }}</p>
+        }
+      </div>
+      <div>
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          (blur)="updErrors('password')"
+        />
+        @if(errors.password){
+        <p>{{ errors.password }}</p>
+        }
+      </div>
+      <button
+        type="submit"
+        [disabled]="!this.regForm.valid || !this.regForm.dirty"
+      >
+        Sign Up
+      </button>
+    </form>
+    <p>Already have an account? <a routerLink="/login">Sign In</a></p>
+  </div>
+</section>
