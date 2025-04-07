@@ -1,4 +1,7 @@
 <app-header/>
 <main class="main">
     <router-outlet />
+    @if(place === '' || place === 'register' || place === 'login'){
+        <app-statistic/>
+    }
 </main>
