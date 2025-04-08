@@ -1,0 +1,89 @@
+@import "../../../styles/variables";
+.statistic {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  // max-height: 800px;
+  background-image: url("../../../../public/images/main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  z-index: -1;
+  .tutorials {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 206px;
+    height: 96px;
+    background-color: $color-primary-dark;
+    border-radius: 12px;
+    .svg {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: $color-primary-light;
+      background-color: $color-secondary-accent;
+      border-radius: 50%;
+      .svgIcon {
+        position: relative;
+        top: 3px;
+        left: 1px;
+      }
+    }
+    .textMain {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .text {
+      color: $color-transparent-secondary;
+    }
+  }
+  .calories {
+    position: absolute;
+    right: 32px;
+    top: calc(50% + 135px);
+    padding: 16px 32px;
+    width: 180px;
+    height: 110px;
+    border-radius: 12px;
+    background-color: $color-secondary-accent;
+    .svg {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      color: $color-primary-light;
+      background-color: $color-third-accent;
+      border-radius: 50%;
+      .svgIcon {
+        position: relative;
+        top: 2px;
+        left: 0;
+      }
+    }
+    .textMain {
+      margin-top: 8px;
+      font-size: 48px;
+      line-height: 1.042;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      .text {
+        font-size: 16px;
+        list-style: 1.5;
+        color: $color-transparent-secondary;
+      }
+    }
+  }
+}

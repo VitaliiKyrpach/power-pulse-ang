@@ -1,0 +1,29 @@
+%button {
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: $color-primary-light;
+  border-radius: 12px;
+  outline: none;
+}
+%mainButton {
+  @extend %button;
+  border: none;
+  background-color: $color-primary-accent;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+  &:hover {
+    background-color: $color-secondary-accent;
+  }
+}
+%emptyButton {
+  @extend %button;
+  border: 1px solid $color-transparent-primary;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border 150ms ease;
+  &:hover {
+    border-color: $color-primary-accent;
+  }
+}

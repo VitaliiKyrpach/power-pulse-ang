@@ -1,27 +1,31 @@
 @import "../../../styles/variables";
-.header{
-    height: 84px;
+.header {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  &.static {
+    position: absolute;
+    width: 100%;
+  }
+  & .container {
     display: flex;
     align-items: center;
-    & .container{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    justify-content: space-between;
+  }
+  .logoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    justify-self: flex-start;
+    .logoSvg {
+      width: 44px;
+      height: 17px;
+      color: $color-primary-accent;
     }
-    .logoWrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        justify-self: flex-start;
-        .logoSvg{
-            width: 44px;
-            height: 17px;
-            color: $color-primary-accent;
-        }
-        .logoText{
-            width: 100px;
-            height: 17px;
-        }
+    .logoText {
+      width: 100px;
+      height: 17px;
     }
+  }
 }

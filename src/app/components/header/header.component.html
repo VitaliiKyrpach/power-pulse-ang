@@ -1,4 +1,9 @@
-<header class="header">
+<header
+  class="header"
+  [ngClass]="{
+    static: place === ''
+  }"
+>
   <div class="container">
     <div class="logoWrapper">
       <span class="logoSvg">
