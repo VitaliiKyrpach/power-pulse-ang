@@ -1,7 +1,9 @@
 <app-header [place]="place" />
 <main class="main">
-  <router-outlet />
-  @if(place === '' || place === 'register' || place === 'login'){
-  <app-statistic />
-  }
+  <div class="container">
+    <router-outlet />
+    @if(place === '' || place === 'register' || place === 'login'){
+    <app-statistic />
+    }
+  </div>
 </main>

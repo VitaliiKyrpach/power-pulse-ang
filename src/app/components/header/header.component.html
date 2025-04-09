@@ -5,14 +5,19 @@
   }"
 >
   <div class="container">
-    <div class="logoWrapper">
+    <button type="button" class="logoWrapper" (click)="redirectToHome()">
       <span class="logoSvg">
         <svg-icon-sprite [src]="'images/sprite.svg#icon-logo'" />
       </span>
       <span class="logoText">
         <svg-icon-sprite [src]="'images/sprite.svg#icon-logo-text'" />
       </span>
+    </button>
+    @if(place !== '' && place !== 'login' && place !== 'register'){
+    <div>
+      <app-user-nav />
+      <app-user-bar />
     </div>
-    <p>auth</p>
+    }
   </div>
 </header>

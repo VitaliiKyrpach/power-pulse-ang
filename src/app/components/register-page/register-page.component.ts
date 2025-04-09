@@ -7,11 +7,12 @@ import {
 } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { RegErrors, RegForm } from '../../interfaces/interfaces';
+import { IconSpriteModule } from 'ng-svg-icon-sprite';
 
 @Component({
   selector: 'app-register-page',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, IconSpriteModule],
   templateUrl: './register-page.component.html',
   styleUrl: './register-page.component.scss',
 })
@@ -83,5 +84,6 @@ export class RegisterPageComponent {
   public formSubmit(): void {
     console.log(this.regForm.value);
     console.log(this.regForm.valid, this.regForm.dirty);
+    this.regForm.reset();
   }
 }

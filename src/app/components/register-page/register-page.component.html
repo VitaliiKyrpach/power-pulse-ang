@@ -1,51 +1,76 @@
-<section>
-  <div class="container">
-    <h2>Sign Up</h2>
-    <p>
-      Thank you for your interest in our platform. To complete the registration
-      process, please provide us with the following information.
-    </p>
-    <form [formGroup]="regForm" (ngSubmit)="formSubmit()">
-      <div>
-        <input
-          type="text"
-          placeholder="Name"
-          formControlName="name"
-          (blur)="updErrors('name')"
-        />
-        @if(errors.name){
-        <p>{{ errors.name }}</p>
-        }
-      </div>
-      <div>
-        <input
-          type="email"
-          placeholder="Email"
-          formControlName="email"
-          (blur)="updErrors('email')"
-        />
-        @if(errors.email){
-        <p>{{ errors.email }}</p>
-        }
-      </div>
-      <div>
-        <input
-          type="password"
-          placeholder="Password"
-          formControlName="password"
-          (blur)="updErrors('password')"
-        />
-        @if(errors.password){
-        <p>{{ errors.password }}</p>
-        }
-      </div>
-      <button
-        type="submit"
-        [disabled]="!this.regForm.valid || !this.regForm.dirty"
-      >
-        Sign Up
-      </button>
-    </form>
-    <p>Already have an account? <a routerLink="/login">Sign In</a></p>
-  </div>
+<section class="register">
+  <h2 class="title">Sign Up</h2>
+  <p class="subtitle">
+    Thank you for your interest in our platform. To complete the registration
+    process, please provide us with the following information.
+  </p>
+  <form [formGroup]="regForm" (ngSubmit)="formSubmit()" class="form">
+    <div class="inputWrapper">
+      <input
+        type="text"
+        placeholder="Name"
+        formControlName="name"
+        (blur)="updErrors('name')"
+        class="input"
+        [class.error]="errors.name"
+      />
+      @if(errors.name){
+      <p class="errorText">
+        <svg-icon-sprite
+          [src]="'images/sprite.svg#icon-circle-done'"
+          [width]="'16px'"
+          [height]="'16px'"
+        />{{ errors.name }}
+      </p>
+      }
+    </div>
+    <div class="inputWrapper">
+      <input
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+        (blur)="updErrors('email')"
+        class="input"
+        [class.error]="errors.email"
+      />
+      @if(errors.email){
+      <p class="errorText">
+        <svg-icon-sprite
+          [src]="'images/sprite.svg#icon-circle-done'"
+          [width]="'16px'"
+          [height]="'16px'"
+        />{{ errors.email }}
+      </p>
+      }
+    </div>
+    <div class="inputWrapper">
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        (blur)="updErrors('password')"
+        class="input"
+        [class.error]="errors.password"
+      />
+      @if(errors.password){
+      <p class="errorText">
+        <svg-icon-sprite
+          [src]="'images/sprite.svg#icon-circle-done'"
+          [width]="'16px'"
+          [height]="'16px'"
+        />{{ errors.password }}
+      </p>
+      }
+    </div>
+    <button
+      type="submit"
+      class="submitBtn"
+      [disabled]="!this.regForm.valid || !this.regForm.dirty"
+    >
+      Sign Up
+    </button>
+  </form>
+  <p class="subtext">
+    Already have an account? <a routerLink="/login" class="link">Sign In</a>
+  </p>
 </section>
