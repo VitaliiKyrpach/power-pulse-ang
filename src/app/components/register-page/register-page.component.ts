@@ -81,9 +81,8 @@ export class RegisterPageComponent {
         break;
     }
   }
-  public formSubmit(): void {
+  public onSubmit(): void {
     console.log(this.regForm.value);
-    console.log(this.regForm.valid, this.regForm.dirty);
     this.regForm.reset();
   }
 }

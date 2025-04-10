@@ -1,0 +1,78 @@
+@import "../../../styles/variables";
+@import "../../../styles/buttons";
+
+.login {
+  .title {
+    font-size: 32px;
+    line-height: 1.375;
+    font-weight: 700;
+    margin-top: 116px;
+    margin-bottom: 16px;
+  }
+  .subtitle {
+    color: $color-transparent-primary;
+    margin-bottom: 32px;
+  }
+  .inputWrapper {
+    position: relative;
+    width: 364px;
+    height: 52px;
+    margin-bottom: 20px;
+    .input {
+      font-family: "roboto", sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
+      width: 100%;
+      height: 100%;
+      color: $color-primary-light;
+      background-color: transparent;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid $color-transparent-primary;
+      outline: none;
+      &:focus {
+        border-color: $color-primary-accent;
+      }
+      &.error {
+        border-color: $color-error;
+      }
+    }
+  }
+  .textError {
+    position: relative;
+    top: -2px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $color-error;
+    svg-icon-sprite {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .submitBtn {
+    @extend %mainButton;
+    width: 182px;
+    height: 56px;
+    margin-top: 44px;
+    margin-bottom: 12px;
+    &[disabled] {
+      background-color: $color-transparent-primary;
+      cursor: not-allowed;
+    }
+  }
+  .subtext {
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: $color-transparent-secondary;
+    margin-left: 7px;
+    .link {
+      color: $color-primary-light;
+      text-decoration: underline;
+    }
+  }
+}

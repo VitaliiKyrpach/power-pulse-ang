@@ -1,1 +1,56 @@
-<p>login-page works!</p>
+<section class="login">
+  <h2 class="title">Sign In</h2>
+  <p class="subtitle">
+    Welcome! Please enter your credentials to login to the platform:
+  </p>
+  <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="inputWrapper">
+      <input
+        type="email"
+        placeholder="Email"
+        class="input"
+        [class.error]="errors.email"
+        formControlName="email"
+        (blur)="updErrors('email')"
+      />
+      @if(errors.email){
+      <p class="textError">
+        <svg-icon-sprite
+          [src]="'images/sprite.svg#icon-circle-done'"
+          [width]="'16px'"
+          [height]="'16px'"
+        />{{ errors.email }}
+      </p>
+      }
+    </div>
+    <div class="inputWrapper">
+      <input
+        type="password"
+        placeholder="Password"
+        class="input"
+        [class.error]="errors.password"
+        formControlName="password"
+        (blur)="updErrors('password')"
+      />
+      @if(errors.password){
+      <p class="textError">
+        <svg-icon-sprite
+          [src]="'images/sprite.svg#icon-circle-done'"
+          [width]="'16px'"
+          [height]="'16px'"
+        />{{ errors.password }}
+      </p>
+      }
+    </div>
+    <button
+      type="submit"
+      class="submitBtn"
+      [disabled]="!loginForm.valid || !loginForm.dirty"
+    >
+      Sign In
+    </button>
+  </form>
+  <p class="subtext">
+    Don’t have an account? <a routerLink="/register" class="link">Sign Up</a>
+  </p>
+</section>

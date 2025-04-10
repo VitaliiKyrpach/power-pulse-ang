@@ -10,3 +10,12 @@ export interface RegErrors {
   email: string;
   password: string;
 }
+
+export interface LoginForm {
+  email: FormControl<string>;
+  password: FormControl<string>;
+}
+export interface LogErrors {
+  email: string;
+  password: string;
+}
