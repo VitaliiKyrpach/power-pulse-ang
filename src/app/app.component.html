@@ -1,9 +1,10 @@
-<app-header [place]="place" />
+<app-header [place]="place" [notFound]="isNotFound" />
 <main class="main">
   <div class="container">
     <router-outlet />
-    @if(place === '' || place === 'register' || place === 'login'){
-    <app-statistic />
+    @if(place === '' || place === 'register' || place === 'login' ||
+    isNotFound){
+    <app-statistic class="wrapper" [notFound]="isNotFound" />
     }
   </div>
 </main>

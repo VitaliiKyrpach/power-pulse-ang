@@ -15,6 +15,7 @@ import { UserNavComponent } from '../user-nav/user-nav.component';
 })
 export class HeaderComponent implements OnInit {
   @Input() place: string = '';
+  @Input() notFound: boolean = false;
   constructor(private router: Router) {}
   ngOnInit(): void {
     console.log(this.place);

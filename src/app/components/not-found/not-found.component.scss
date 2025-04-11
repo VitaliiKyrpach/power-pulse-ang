@@ -1,0 +1,28 @@
+@import "../../../styles/variables";
+@import "../../../styles/buttons";
+
+.notFound {
+  position: absolute;
+  background-color: $color-primary-accent;
+  max-width: 669px;
+  height: 100vh;
+  padding-top: 221px;
+  padding-left: 96px;
+  padding-right: 96px;
+  margin-left: -96px;
+  .title {
+    font-size: 160px;
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .text {
+    letter-spacing: 0.01em;
+    margin-bottom: 28px;
+  }
+  .btn {
+    @extend %mainButton;
+    width: 204px;
+    height: 56px;
+    border: 1px solid $color-transparent-primary;
+  }
+}

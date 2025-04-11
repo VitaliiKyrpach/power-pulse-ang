@@ -3,10 +3,11 @@
   height: 84px;
   display: flex;
   align-items: center;
-  // &.static {
-  //   position: absolute;
-  //   width: 100%;
-  // }
+  &.static {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
   & .container {
     display: flex;
     align-items: center;
@@ -18,14 +19,18 @@
     justify-content: center;
     gap: 8px;
     justify-self: flex-start;
-    background-color: transparent;
     color: $color-primary-light;
+    background-color: transparent;
+    padding: 0;
     border: none;
     cursor: pointer;
     .logoSvg {
       width: 44px;
       height: 17px;
       color: $color-primary-accent;
+      &.static {
+        color: $color-primary-light;
+      }
     }
     .logoText {
       width: 100px;

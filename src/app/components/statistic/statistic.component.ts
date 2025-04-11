@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IconSpriteModule } from 'ng-svg-icon-sprite';
 
 @Component({
@@ -8,4 +8,6 @@ import { IconSpriteModule } from 'ng-svg-icon-sprite';
   templateUrl: './statistic.component.html',
   styleUrl: './statistic.component.scss',
 })
-export class StatisticComponent {}
+export class StatisticComponent {
+  @Input() notFound: boolean = false;
+}
