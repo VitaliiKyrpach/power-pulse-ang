@@ -3,10 +3,12 @@
   height: 84px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid $color-transparent-thirdly;
   &.static {
     position: absolute;
     width: 100%;
     z-index: 10;
+    border: none;
   }
   & .container {
     display: flex;
@@ -36,5 +38,14 @@
       width: 100px;
       height: 17px;
     }
+  }
+  .headerUser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+  .userNav{
+    height: auto;
   }
 }

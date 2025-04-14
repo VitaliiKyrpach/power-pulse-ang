@@ -1,0 +1,54 @@
+@import '../../../styles/variables';
+.userBar{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    .settings{
+        color: $color-transparent-primary;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: color 150ms linear;
+        &:hover{
+            color: $color-transparent-secondary;
+        }
+    }
+    .avatar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-transparent-thirdly;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        border: 1px solid $color-primary-accent;
+        svg-icon-sprite{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .logoutBtn{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: "roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $color-primary-light;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        svg-icon-sprite{
+            width: 20px;
+            height: 20px;
+            color: $color-primary-accent;
+            transition: color 150ms linear;
+        }
+        &:hover  svg-icon-sprite{
+            color: $color-secondary-accent;
+        }
+    }
+}

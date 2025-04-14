@@ -5,6 +5,8 @@ import { RegisterPageComponent } from './components/register-page/register-page.
 import { DiaryPageComponent } from './components/diary-page/diary-page.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProductsPageComponent } from './components/products-page/products-page.component';
+import { ExercisesPageComponent } from './components/exercises-page/exercises-page.component';
 
 export const routes: Routes = [
   {
@@ -26,6 +28,14 @@ export const routes: Routes = [
   {
     path: 'profile',
     component: ProfilePageComponent,
+  },
+  {
+    path: 'products',
+    component: ProductsPageComponent
+  },
+  {
+    path: 'exercises',
+    component: ExercisesPageComponent
   },
   {
     path: '**',

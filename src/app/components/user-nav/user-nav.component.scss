@@ -1,0 +1,25 @@
+@import '../../../styles/buttons';
+.linkList{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .link{
+        @extend %emptyButton;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 119px;
+        height: 44px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .current{
+        background-color: $color-primary-accent;
+        border: none;
+        transition: background-color 150ms ease;
+        &:hover {
+          background-color: $color-secondary-accent;
+        }
+    }
+}

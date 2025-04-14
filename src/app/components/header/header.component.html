@@ -15,8 +15,10 @@
       </span>
     </button>
     @if(place !== '' && place !== 'login' && place !== 'register' && !notFound){
-    <div>
-      <app-user-nav />
+    <div class="headerUser">
+      @if(place !== 'profile'){
+        <app-user-nav class="userNav"/>
+      }
       <app-user-bar />
     </div>
     }

@@ -1,1 +1,24 @@
-<p>user-bar works!</p>
+<div class="userBar">
+    <button type="button" class="settings" (click)="goToProfile()">
+        <svg-icon-sprite
+        [src]="'images/sprite.svg#icon-settings'"
+        [width]="'28px'"
+        [height]="'28px'"
+        />
+    </button>
+    <div class="avatar">
+        <svg-icon-sprite
+        [src]="'images/sprite.svg#icon-user'"
+        [width]="'24px'"
+        [height]="'24px'"
+        />
+    </div>
+    <button type="button" class="logoutBtn" (click)="logout()">
+        Logout
+        <svg-icon-sprite
+        [src]="'images/sprite.svg#icon-logout'"
+        [width]="'20px'"
+        [height]="'20px'"
+        />
+    </button>
+</div>

@@ -1,8 +1,9 @@
 @import "../../../styles/variables";
 .statistic {
   position: relative;
+  left: -16px;
   width: 670px;
-  max-width: 800px;
+  // max-width: 800px;
   height: 100vh;
   background-image: linear-gradient(
       90deg,
@@ -13,7 +14,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom right;
-  z-index: -1;
+  // z-index: -1;
   .tutorials {
     position: absolute;
     left: 0px;
