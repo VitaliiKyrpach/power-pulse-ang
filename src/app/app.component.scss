@@ -3,7 +3,10 @@
   background-color: aqua;
 }
 .wrapper {
-  position: relative;
-  left: 96px;
+  // position: relative;
+  // left: 96px;
   // margin-left: auto;
+  position: absolute;
+  right: 0px;
+  height: 100vh;
 }

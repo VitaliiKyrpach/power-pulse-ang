@@ -54,11 +54,13 @@ li {
   list-style-type: none;
 }
 .container {
+  position: relative;
   display: flex;
   justify-content: start;
   margin: 0 auto;
   padding: 0px 96px;
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  // overflow: hidden;
   max-width: 1440px;
 }

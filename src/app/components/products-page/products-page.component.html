@@ -1,1 +1,53 @@
-<p>products-page works!</p>
+<section class="products">
+  <div class="">
+    <div class="titleWrapper">
+      <h2 class="title">Products</h2>
+      <ul class="filtersList">
+        <li>
+          <div class="inputWrapper">
+            <input
+              type="text"
+              class="input"
+              placeholder="Search"
+              [(ngModel)]="search"
+            />
+            @if(search.length > 0){
+
+            <div class="iconX" (click)="clearSearch()">
+              <svg-icon-sprite
+                [src]="'images/sprite.svg#icon-x'"
+                [width]="'18px'"
+                [height]="'18px'"
+              />
+            </div>
+            }
+            <div class="iconSearch" (click)="goSearch()">
+              <svg-icon-sprite
+                [src]="'images/sprite.svg#icon-search'"
+                [width]="'18px'"
+                [height]="'18px'"
+              />
+            </div>
+          </div>
+        </li>
+        <li><input type="text" /></li>
+        <li><input type="text" /></li>
+      </ul>
+    </div>
+    @if(dataExist){
+    <ul>
+      <li>product</li>
+    </ul>
+    }@else{
+
+    <p class="text">
+      <span class="accent"> Sorry, no results were found </span>
+      for the product filters you selected. You may want to consider other
+      search options to find the product you want. Our range is wide and you
+      have the opportunity to find more options that suit your needs.
+    </p>
+    <p class="subtext accent">Try changing the search parameters.</p>
+    }
+    <div class="img"></div>
+  </div>
+</section>
