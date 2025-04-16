@@ -1,5 +1,9 @@
 @import "../../../styles/variables";
+:host {
+  width: 100%;
+}
 .products {
+  width: 100%;
   .titleWrapper {
     display: flex;
     justify-content: space-between;
@@ -29,6 +33,13 @@
     background-image: url("../../../../public/images/prodsBack.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -1;
+  }
+  .filtersList{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-left: auto;
   }
   .inputWrapper {
     position: relative;
@@ -59,5 +70,77 @@
     background-color: transparent;
     border-radius: 12px;
     border: 1px solid $color-transparent-primary;
+  }
+  p-select.categories{
+    width: 192px;
+  }
+  p-select.recommended{
+    width: 204px;
+  }
+  p-select{
+    height: 52px;
+    padding: 14px;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 1px solid $color-transparent-primary;
+  }
+  ::ng-deep.p-select-label{
+    color: $color-primary-light;
+    padding: 0;
+  }
+  ::ng-deep.p-select-overlay{
+    background-color: $color-back_secondary;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    padding-right: 7px;
+    margin-top: 2px;
+  }
+  ::ng-deep.p-select-dropdown{
+    position: relative;
+    width: 18px;
+    height: 18px;
+  }
+  ::ng-deep.p-icon{
+    position: relative;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+  }
+  ::ng-deep.p-select-list-container{
+    max-height: 300px !important;
+  }
+  ::ng-deep.p-select-list-container::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;      
+  }
+  
+  ::ng-deep.p-select-list-container::-webkit-scrollbar-thumb {
+
+    background-color: $color-transparent-thirdly;
+    border-radius: 12px;
+    border: none
+  }
+
+  ::ng-deep.p-select-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  ::ng-deep.p-select-option{
+    color: $color-primary-light;
+    padding: 0;
+  }
+  ::ng-deep.p-select-option:not(.p-select-option-selected):not(.p-disabled).p-focus{
+    color: $color-secondary-accent;
+    background-color: transparent;
+  }
+  ::ng-deep.p-select-option.p-select-option-selected{
+    color: $color-primary-accent;
+    background-color: transparent;
+  }
+  ::ng-deep.p-select-option.p-focus{
+    color: $color-secondary-accent;
+    background-color: transparent;
   }
 }

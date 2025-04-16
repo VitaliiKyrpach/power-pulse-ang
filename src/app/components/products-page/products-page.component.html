@@ -30,8 +30,9 @@
             </div>
           </div>
         </li>
-        <li><input type="text" /></li>
-        <li><input type="text" /></li>
+        <li><p-select [options]="categories" [(ngModel)]="category"   placeholder="Categories" class="categories" /></li>
+        <li><p-select [options]="recommendArr" [(ngModel)]="recommend"   class="recommended" /></li>
+        
       </ul>
     </div>
     @if(dataExist){

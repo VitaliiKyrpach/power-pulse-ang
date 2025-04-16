@@ -15,30 +15,37 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginPageComponent,
+    loadComponent: ()=> import('./components/login-page/login-page.component').then(c=> c.LoginPageComponent)
+    // component: LoginPageComponent,
   },
   {
     path: 'register',
-    component: RegisterPageComponent,
+    loadComponent: ()=> import('./components/register-page/register-page.component').then(c=> c.RegisterPageComponent)
+    // component: RegisterPageComponent,
   },
   {
     path: 'diary',
-    component: DiaryPageComponent,
+    loadComponent: ()=> import('./components/diary-page/diary-page.component').then(c=> c.DiaryPageComponent)
+    // component: DiaryPageComponent,
   },
   {
     path: 'profile',
-    component: ProfilePageComponent,
+    loadComponent: ()=> import('./components/profile-page/profile-page.component').then(c=> c.ProfilePageComponent)
+    // component: ProfilePageComponent,
   },
   {
     path: 'products',
-    component: ProductsPageComponent
+    loadComponent: ()=> import('./components/products-page/products-page.component').then(c=>c.ProductsPageComponent)
+    // component: ProductsPageComponent
   },
   {
     path: 'exercises',
-    component: ExercisesPageComponent
+    loadComponent: ()=> import('./components/exercises-page/exercises-page.component').then(c=> c.ExercisesPageComponent)
+    // component: ExercisesPageComponent
   },
   {
     path: '**',
-    component: NotFoundComponent,
+    loadComponent: ()=>import('./components/not-found/not-found.component').then(c=>c.NotFoundComponent)
+    // component: NotFoundComponent,
   },
 ];
