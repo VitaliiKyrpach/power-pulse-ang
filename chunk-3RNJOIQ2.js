@@ -1,0 +1,1 @@
+import{Ra as n,Sa as o,W as a,fb as i,mb as p}from"./chunk-OSZG5VDZ.js";var r=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=a({type:t,selectors:[["app-diary-page"]],standalone:!0,features:[p],decls:2,vars:0,template:function(e,m){e&1&&(n(0,"p"),i(1,"diary-page works!"),o())}})};export{r as DiaryPageComponent};
